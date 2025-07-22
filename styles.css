@@ -1,0 +1,197 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /*border: 1px dotted red;*/
+}
+
+:root {
+  /* === Tipografía === */
+  --main-font: sans-serif;
+
+  /* Escala de tamaños de fuente (basada en 1rem = 16px) */
+  --font-size-base: 1rem; /* 16px - Texto principal, párrafos, listas */
+  --font-size-md: 1.25rem; /* 20px - Subtítulos (h4) */
+  --font-size-lg: 1.56rem; /*~25px - Títulos de sección (h3.section)*/
+  --font-size-xl: 1.95rem; /*~31px - Tu nombre (h2) */
+  --font-size-xxl: 2.44rem; /*~39px - Título del puesto (h1)  */
+
+  /* Pesos de la fuente */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Altura de línea para mejorar legibilidad */
+  --line-height-base: 1.6;
+}
+
+body {
+  display: flex;
+  font-family: var(--main-font);
+  padding: 20px;
+  line-height: var(--line-height-base);
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100dvh;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/*---------------Header(encabezado)---------------*/
+.header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  font-size: var(--font-size-xxl);
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: var(--font-weight-regular);
+}
+
+.header h2 {
+  font-size: var(--font-size-xl);
+  margin-top: 0;
+  color: #000;
+  font-weight: var(--font-weight-bold);
+}
+
+.header p {
+  font-size: var(--font-size-base);
+  color: #000;
+}
+
+.header a {
+  color: #000;
+  text-decoration: none;
+}
+
+.header a:hover {
+  text-decoration: underline;
+}
+
+/*---------------Section(secciones)---------------*/
+
+.section {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.section:last-child {
+  border-bottom: none; /* Elimina la línea de la última sección */
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section h3 {
+  font-size: var(--font-size-lg);
+  color: #000;
+  margin-bottom: 15px;
+  display: inline-block; /* Para que la línea se ajuste al texto */
+  padding-bottom: 5px;
+}
+
+/*---------------Entradas de experiencia y proyectos---------------*/
+
+.job-entry,
+.project-entry,
+.education-entry {
+  margin-bottom: 20px;
+}
+
+.job-entry h4,
+.project-entry h4,
+.education-entry h4 {
+  font-size: var(--font-size-md);
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.date-range {
+  font-style: var(--font-size-base);
+  color: #555;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 20px;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+.skills-used {
+  margin-top: 10px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+/*---------------Estilos para la sección de Skills---------------*/
+
+.section p {
+  margin-bottom: 0;
+}
+
+/*------Responsive Design con Media Queries(para pantallas más pequeñas)------*/
+
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  .container {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .header h2 {
+    font-size: 1.2em;
+  }
+
+  .section h3 {
+    font-size: var(--font-size-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .header h1 {
+    font-size: 1.8em;
+  }
+
+  .header h2 {
+    font-size: 1em;
+  }
+
+  .header p {
+    font-size: 0.8em;
+  }
+
+  .section h3 {
+    font-size: var(--font-size-lg);
+  }
+}
